@@ -1,19 +1,63 @@
 ﻿@page "/"
+@page "/{routeNoimbahs:int?}"
+@rendermode InteractiveServer
 
 <PageTitle>Jome</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>Why are you here</h1>
 
-<p>Welcome to your new app.</p>
+<p>Welcome to the noimbahs.</p>
+
+
+
+<button class="btn btn-primary" @onclick ="GetDate">What's Today?</button>
+@if(iCare)
+{
+    <p class="date">@dateTime</p>
+}
+else
+{
+    <p class="date">Who Cares</p>
+}
+
+<button class="btn btn-primary" @onclick="Alphabet">Letter Jumpscare</button>
+@if(alphabet)
+{
+    <ol class="subset">
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+    <li>d</li>
+    <li>e</li>
+    <li>f</li>
+    <li>g</li>
+    <li>h</li>
+    <li>i</li>
+    <li>j</li>
+    <li>k</li>
+    <li>l</li>
+    <li>m</li>
+    <li>n</li>
+    <li>o</li>
+    <li>p</li>
+    <li>q</li>
+    <li>r</li>
+    <li>s</li>
+    <li>t</li>
+    <li>u</li>
+    <li>v</li>
+    <li>w</li>
+    <li>x</li>
+    <li>y</li>
+    <li>z</li>
+
+
+</ol>
+}
 
 @{
         var number = randomNum();
-      
-        var message = "Who cares?";
-  
 }
-
-<button class="btn btn-primary" @onclick = "dateTime">What's Today?</button>
 
 <p>Your increment amount is @number.</p>
 <Counter IncrementAmount= "number"/>
@@ -21,6 +65,22 @@
 {
     <p>AGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH</p>
 }
+
+<table class="table-striped bootstrap table">
+            <thead>
+                <tr>
+                    <th>noimbah</th>
+                </tr>
+            </thead>  
+            <tbody>
+                @for(int i = 0; i < noimbahsTable.Length; i++)
+                {
+                    <tr>
+                        <td>@noimbahsTable[i]</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
 
 
 @code {
@@ -33,18 +93,42 @@
     public DateTime dateTime { get; set; }
 
 
-    public int[] ints = new int[49];
+
+    public bool iCare = false;
 
 
-    private void todayDate()
+    protected override void OnInitialized()
     {
+        //Set dateTime to current date via DateTime class
         dateTime = DateTime.Now;
-        var rand = new Random();
-        for(int i = 0; i < ints.Length; i++)
+
+        //Fill noimbahs with random noimbahs(numbers)
+        var rando = new Random();
+        for(int i = 0; i < noimbahsTable.Length; i++)
         {
-            ints[i] = rand.Next(0, 100);
+            noimbahsTable[i] = rando.Next(0, routeNoimbahs);
         }
+
     }
+
+    private void GetDate()
+    {
+        iCare = !iCare;
+    }
+
+    private bool alphabet = false;
+    private void Alphabet()
+    {
+        alphabet = !alphabet;
+    }
+
+    public int[] noimbahsTable = new int[11];
+    
+
+    [Parameter]
+    public int routeNoimbahs { get; set; }
+
+
 
   
 
