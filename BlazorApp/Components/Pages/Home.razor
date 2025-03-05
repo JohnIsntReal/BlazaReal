@@ -1,0 +1,53 @@
+﻿@page "/"
+
+<PageTitle>Jome</PageTitle>
+
+<h1>Hello, world!</h1>
+
+<p>Welcome to your new app.</p>
+
+@{
+        var number = randomNum();
+      
+        var message = "Who cares?";
+  
+}
+
+<button class="btn btn-primary" @onclick = "dateTime">What's Today?</button>
+
+<p>Your increment amount is @number.</p>
+<Counter IncrementAmount= "number"/>
+@if (number == 1)
+{
+    <p>AGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH</p>
+}
+
+
+@code {
+    private int randomNum()
+    {
+        Random random = new Random();
+        int randomNumber = random.Next(0, 11);
+        return randomNumber;
+    }
+    public DateTime dateTime { get; set; }
+
+
+    public int[] ints = new int[49];
+
+
+    private void todayDate()
+    {
+        dateTime = DateTime.Now;
+        var rand = new Random();
+        for(int i = 0; i < ints.Length; i++)
+        {
+            ints[i] = rand.Next(0, 100);
+        }
+    }
+
+  
+
+
+}
+
