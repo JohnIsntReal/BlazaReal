@@ -27,5 +27,4 @@ c:\Users\jw1043808\Desktop\Capstone\Blaza\BlazorApp\obj\Debug\net8.0\refint\Blaz
 c:\Users\jw1043808\Desktop\Capstone\Blaza\BlazorApp\obj\Debug\net8.0\BlazorApp.pdb
 c:\Users\jw1043808\Desktop\Capstone\Blaza\BlazorApp\obj\Debug\net8.0\BlazorApp.genruntimeconfig.cache
 c:\Users\jw1043808\Desktop\Capstone\Blaza\BlazorApp\obj\Debug\net8.0\ref\BlazorApp.dll
-c:\Users\jw1043808\Desktop\Capstone\Blaza\BlazorApp\obj\Debug\net8.0\BlazorApp.RazorAssemblyInfo.cache
-c:\Users\jw1043808\Desktop\Capstone\Blaza\BlazorApp\obj\Debug\net8.0\BlazorApp.RazorAssemblyInfo.cs
+c:\Users\jw1043808\Desktop\Capstone\Blaza\BlazorApp\obj\Debug\net8.0\BlazorApp.sourcelink.json

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mpZjZQydXIv9KyY+HCmv7a9M6C7hGWtE2gxsZ+ZzvDw=",
+  "Hash": "x/264ftVqSuY8wFg6f1N1dOQVuGYozc7Dcj9lRyFFnQ=",
   "Source": "BlazorApp",
   "BasePath": "_content/BlazorApp",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Identity": "c:\\Users\\jw1043808\\Desktop\\Capstone\\Blaza\\BlazorApp\\wwwroot\\ches.png",
+      "SourceId": "BlazorApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\jw1043808\\Desktop\\Capstone\\Blaza\\BlazorApp\\wwwroot\\",
+      "BasePath": "_content/BlazorApp",
+      "RelativePath": "ches.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ches.png"
     },
     {
       "Identity": "c:\\Users\\jw1043808\\Desktop\\Capstone\\Blaza\\BlazorApp\\wwwroot\\favicon.png",

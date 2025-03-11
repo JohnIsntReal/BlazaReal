@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
+      "Id": "c:\\Users\\jw1043808\\Desktop\\Capstone\\Blaza\\BlazorApp\\wwwroot\\ches.png",
+      "PackagePath": "staticwebassets\\ches.png"
+    },
+    {
       "Id": "c:\\Users\\jw1043808\\Desktop\\Capstone\\Blaza\\BlazorApp\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },

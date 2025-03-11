@@ -9,7 +9,7 @@
 
 <p role="status">Current count: @currentCount</p>
 
-<button class="btn btn-primary" @onclick="IncrementCount">boop</button>
+<button class="btn btn-primary" @onclick="IncrementCountAysnc">boop</button>
 @if (currentCount >= 3){
     <p>Noimbers</p>
 }
@@ -47,5 +47,10 @@
             currentCount += IncrementAmount;
         }
         
+    }
+    async Task IncrementCountAysnc()
+    {
+        await Task.Delay(1000);
+        currentCount++;
     }
 }
