@@ -7,6 +7,17 @@
 
 <h1>Counter</h1>
 
+
+
+<div class="mt-3">
+    <input @oninput="OnInput">
+    <p>@text</p>
+</div>
+
+<div style="background-color: blueviolet" @onmouseover=MouseOver @onmouseout=MouseOut>
+    @text2
+</div>
+
 <p role="status">Current count: @currentCount</p>
 
 <button class="btn btn-primary" @onclick="IncrementCountAysnc">boop</button>
@@ -26,13 +37,14 @@
 </ul>
 
 <p>InitialCount = @initialCount</p>
+
 @code {
     private int currentCount = 0;
 
-    protected override void OnInitialized()
-    {
-        currentCount = initialCount;
-    }
+    string text = "";
+    string text2 = "Mouse out";
+
+    protected override void OnInitialized() => currentCount = initialCount;
 
     [Parameter]
     public int initialCount { get; set; }
@@ -46,11 +58,20 @@
         {
             currentCount += IncrementAmount;
         }
-        
+
     }
-    async Task IncrementCountAysnc()
+    async Task IncrementCountAysnc() => currentCount++;
+
+    private void OnInput(ChangeEventArgs e) => text = (string)e.Value!;
+
+    private void MouseOver()
     {
-        await Task.Delay(1000);
-        currentCount++;
-    }
+        text2 = "Mouse over";
+    } 
+
+    private void MouseOut()
+    {
+        text2 = "Mouse out";
+    } 
+        
 }

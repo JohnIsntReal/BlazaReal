@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jw1043808\\Desktop\\Capstone\\Blaza\\BlazorApp\\BlazorApp.csproj": {}
+    "c:\\Users\\jw1043808\\Desktop\\Capstone\\Blaza\\BlazorApp\\BlazorApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jw1043808\\Desktop\\Capstone\\Blaza\\BlazorApp\\BlazorApp.csproj": {
+    "c:\\Users\\jw1043808\\Desktop\\Capstone\\Blaza\\BlazorApp\\BlazorApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jw1043808\\Desktop\\Capstone\\Blaza\\BlazorApp\\BlazorApp.csproj",
+        "projectUniqueName": "c:\\Users\\jw1043808\\Desktop\\Capstone\\Blaza\\BlazorApp\\BlazorApp.csproj",
         "projectName": "BlazorApp",
-        "projectPath": "C:\\Users\\jw1043808\\Desktop\\Capstone\\Blaza\\BlazorApp\\BlazorApp.csproj",
+        "projectPath": "c:\\Users\\jw1043808\\Desktop\\Capstone\\Blaza\\BlazorApp\\BlazorApp.csproj",
         "packagesPath": "C:\\Users\\jw1043808\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jw1043808\\Desktop\\Capstone\\Blaza\\BlazorApp\\obj\\",
+        "outputPath": "c:\\Users\\jw1043808\\Desktop\\Capstone\\Blaza\\BlazorApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
