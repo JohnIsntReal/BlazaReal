@@ -9,12 +9,12 @@ main[b-qgsvw684bo] {
 }
 
 .sidebar[b-qgsvw684bo] {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    background-image: linear-gradient(133deg, rgb(7, 75, 201) 0%, #e6d708 70%);
 }
 
 .top-row[b-qgsvw684bo] {
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #d6d5d5;
+    background-color: #383838;
+    border-bottom: 1px solid #525252;
     justify-content: flex-end;
     height: 3.5rem;
     display: flex;

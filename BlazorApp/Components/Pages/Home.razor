@@ -10,7 +10,7 @@
 
 
 
-<button class="btn btn-primary" @onclick ="GetDate">What's Today?</button>
+<button class="btn btn-primary" @onclick="() => iCare = !iCare ">What's Today?</button>
 @if(iCare)
 {
     <p class="date">@dateTime</p>
@@ -111,10 +111,7 @@ else
 
     }
 
-    private void GetDate()
-    {
-        iCare = !iCare;
-    }
+    
 
     private bool alphabet = false;
     private void Alphabet()
