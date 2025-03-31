@@ -1,0 +1,15 @@
+@page "/todo"
+
+<h3>ToDo</h3>
+
+
+
+@code {
+    List<TodoItem> todos = new List<TodoItem>();
+    public class TodoItem
+    {
+        
+        public string Title { get; set; }
+        public bool IsDone { get; set; }
+    }
+}

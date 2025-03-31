@@ -1,0 +1,38 @@
+@page "/breakfast"
+@rendermode InteractiveServer
+
+<p>Not here</p>
+<button class="btn btn-primary" @onclick="PourCoffee">Coffee</button>
+<p>@coffee</p>
+<button class="btn btn-primary" @onclick="FryEggs">Egg</button>
+<p>@eggs</p>
+
+@code {
+
+string coffee = "";
+string eggs = "";
+
+private void PourCoffee()
+{
+    coffee = ""; 
+    
+    coffee = "Coffee Poured!";
+}
+private void FryEggs()
+{
+    eggs = "";
+    eggs = "cooking the eggs ...";
+    Task.Delay(3000).Wait();
+    eggs = "cooking the eggs ...";
+    Task.Delay(3000).Wait();
+    eggs = "Eggs Plated!";
+
+}
+
+public int GenRandom(int minimum, int maximum)
+{
+    Random random = new Random();
+    return random.Next(minimum, maximum);
+}
+
+}

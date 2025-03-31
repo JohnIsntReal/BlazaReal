@@ -19,6 +19,7 @@
     <p>Address</p>
     <input @oninput="OnInput">
     <p>@address</p>
+    <p>@searchResult</p>
 </div>
 
 
@@ -29,6 +30,13 @@
 <p role="status">Current count: @currentCount</p>
 
 <button class="btn btn-primary" @onclick="IncrementCountAysnc">boop</button>
+
+<div class = "mt-3">
+    <input @bind="text" @bind:event="oninput" @bind:after="Search">
+    <Button @onclick="OnClick">Clear</Button>
+    <p>@text</p>
+</div>
+
 @if (currentCount >= 3){
     <p>Noimbers</p>
 }
@@ -56,6 +64,8 @@
 
     string text = "";
     string text2 = "erm...";
+
+    string searchResult = "";
 
     bool isMouse;
 
@@ -85,6 +95,20 @@
 
     }
     
+    private void Text(ChangeEventArgs e)
+    {
+        text = (string)e.Value!;
+    }
+    private void OnClick(MouseEventArgs e)
+    {
+        text = "";
+    }
+    async Task Search()
+    {
+        searchResult = "Searching...";
+        await Task.Delay(2000);
+        searchResult = $"Found {Random.Shared.Next()} results!";
+    }
 
     
 

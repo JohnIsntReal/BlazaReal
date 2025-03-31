@@ -3,31 +3,42 @@
 @page "/bodypositivityorsumthinidk"
 @rendermode InteractiveServer
 
-<div class="mt-3" >
-    <p>Weight</p>
-    <input @oninput="OnInput">
-    @text
+
+<div class="form-group">
+    <p>Weight (pounds)</p>
+    <input type="number" @oninput="ChangeWeight" @onmouseleave="BMICalculate" class="form-control" placeholder="weight (pounds)">
+    @Weight
 </div>
-<div>
-    <p>Height</p>
+<div class="form-group">
+    <p>Height (inches)</p>
+    <input type="number" @oninput="ChangeHeight" @onmouseleave="BMICalculate" class="form-control" placeholder="height (in)">
+    @Height
 </div>
 
-<div class="mt-3" >
-    <p>Feet</p>
-    <input @oninput="OnInput">
-    @text
-</div>
-<div class="mt-3" >
-    <p>Inches</p>
-    <input @oninput="OnInput">
-    @text
-</div>
+
+
 
 
 @code {
 
     string text = "";
-    private void OnInput(ChangeEventArgs e) => text = (string)e.Value!;
+
+    double Weight;
+    double Height;
+
+    double bmi;
+    private void OnChange(ChangeEventArgs e) => text = (string)e.Value!;
+
+    private void ChangeWeight(ChangeEventArgs e) => Weight = Int32.Parse((string)e.Value!);
+    private void ChangeHeight(ChangeEventArgs e) => Height = Int32.Parse((string)e.Value!);
+    
+
+    private void BMICalculate()
+    {
+        bmi = Weight / Math.Pow(Height, 2) * 703;
+    }
+
+
 
         
 }
